@@ -31,10 +31,10 @@ Write-Host "Check network connection to google" -BackgroundColor DarkGreen -Fore
 
 $networkAvailable = Test-Connection -ComputerName google.com -Count 1 -ErrorAction SilentlyContinue
 if([string]::IsNullOrEmpty($networkAvailable)){
-    $download = "https://ghfast.top/https://github.com/$clientrepo/releases/download/v0.1.7/download/$file"
+    $download = "https://ghfast.top/https://github.com/$clientrepo/releases/download/v0.1.7/$file"
     Write-Host "Location:CN,use mirror address" -BackgroundColor DarkRed -ForegroundColor Green
 }else{
-    $download = "https://github.com/$clientrepo/releases/download/v0.1.7/download/$file"
+    $download = "https://github.com/$clientrepo/releases/download/v0.1.7/$file"
     Write-Host "Location: google ok,connect directly!" -BackgroundColor DarkRed -ForegroundColor Green
 }
 echo $download
